@@ -1,0 +1,92 @@
+.yahei() {
+    font-family: 'Microsoft Yahei', '微软雅黑', Helvetica, Arial, sans-serif;
+}
+.ease(@a,@b,@c){ 
+	-webkit-transition:@a @b @c;
+	-moz-transition:@a @b @c;
+	-o-transition:@a @b @c;
+	transition:@a @b @c;
+}
+.dey(@a){
+	-webkit-transition-delay: @a;
+	-moz-transition-delay: @a;
+	-ms-transition-delay: @a;
+	transition-delay: @a;
+
+	-webkit-animation-delay:@a;
+	-moz-animation-delay:@a;
+	-ms-animation-delay:@a;
+	animation-delay:@a;
+}
+.blur(){
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}
+
+:global {
+	
+	//login 
+	.login{
+		.login_a{color:#fff !important; font-size: 16px}
+		
+		background:#004b91 url(../images/login_bg.jpg) no-repeat bottom center;
+		background-size: cover;
+		height: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+		//overflow: hidden;
+
+	.main{
+			padding: 0 2.5em;
+	}
+	.pos{
+			position: absolute;
+			top: 50%;
+			margin-top: -60%;
+			width: 100%;
+	}
+	.lg_css{
+				margin-bottom: 1.5em;
+				text-align: center;
+	}
+	.lg_bp{
+				margin-top: 2.5em;	
+			}
+	.lg_cp{
+				border-bottom:1px solid #0c1c21;
+				padding: .6em 0;
+				margin-bottom: 1em;
+				.icon{ font-size: 20px; margin-right: .1em;color:#000}
+				input{
+					background:none;
+					border: 0 none;
+					color:#fff;
+					font-size: 16px;
+					&::-webkit-input-placeholder{color:#b2c4e3;}
+					&:-ms-input-placeholder{color:#b2c4e3;}
+					&::-moz-input-placeholder{color:#b2c4e3;}
+				}
+	}
+
+	.lg_fg{
+					padding-top: 1em;
+					text-align: right;
+	}
+	.button.weui_btn,.button{
+					background: none;
+					border-radius: 0;
+					letter-spacing:10px;
+					background: #dfc534;
+					font-size: 20px;
+					border-radius: 25px;
+					&:after{
+						border:0 none;
+					}
+					&:active{
+						.ease(all,.2s,ease);
+						background: #D2B300 !improtant;
+						//box-shadow:  0 4px 2px #516526;
+					}
+				}
+	}
+}
