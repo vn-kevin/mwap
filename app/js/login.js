@@ -11,7 +11,7 @@ const Login = ((arg)=>{
 
 			$('.page-group').delegate(dom+' #loginBtn','click',function(){
 				 //console.log(123);
-				 //
+				
 				 Srouter.setLoad('#index');
 
 			});

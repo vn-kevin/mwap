@@ -4,13 +4,21 @@ import Index from './js/index.js';
 
 let Lindex= 0;
 $.config = {router: true}
+
+/*
+	重写路由方法 
+	直接在A href='#index'  sui 路由里面的内联路由
+
+*/
 var Srouter={
 	thisF:{
 		login:Login(),
 		index:Index()
 	},
+	//加载对应模版 
 	setLoad:function(url){
 		let urls=url.replace('#','');
+		//发现页面模版存在该模版，直接跳转  else AJAX加载
 		if($('.tmpHtml').find(url).length){
 			$.router.load(url);
 		}else{
@@ -25,6 +33,7 @@ var Srouter={
 			});
 		}
 	},
+	//重新绑定所有 A事件 
 	setA:function(){
 		let that =this;
 		//改变 触发A 事件
@@ -44,34 +53,25 @@ var Srouter={
 		this.setA();
 		//路由监控
 		$(document).on("pageInit", function(e, pageId, $page) {
-
+			//去除重复方法执行 
 			if(typeof(that.thisF[pageId])=="object" && pageId !='login' ){
 				that.thisF[pageId].init({page:pageId,F:Srouter});
 				that.thisF[pageId]=true;
 			}
-			//console.log(that.thisF[pageId])
-			//if(that.thisF[pageId]===true)
-			
-			/*if (pageId == "index") {
-				that.thisF[pageId].init({page:pageId,F:Srouter});
-			}else if(pageId=="login"){
-				that.thisF[pageId].init({page:pageId,F:Srouter});
-			}*/
 		});
-
 	}
 }
 
 $(function(){
 	if(Lindex==0){
 
-		//阀值 
-		//Srouter.setLoad('#index')
+		//开发设置 阀值 
+		Srouter.setLoad('#index')
 		
-		//login JS
+		//初始直接加载Login
 		Srouter.thisF['login'].init({page:"login",F:Srouter})
-		
 	}
+	//设置路由开启 再执行 重写路由方法
 	if($.config.router){
 		Srouter.init();
 	}
