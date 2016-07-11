@@ -24,11 +24,11 @@ module.exports = {
                 }
                 }, {  
                       test: /\.less$/,
-                      loader: 'style-loader!css-loader!less-loader'
-                      /*loader: ExtractTextPlugin.extract(
+                     // loader: 'style-loader!css-loader!less-loader'
+                      loader: ExtractTextPlugin.extract(
                         'css?sourceMap!' +
                         'less?sourceMap'
-                      )*/
+                      )/**/
                },
               {
                 test: /\.(png|jpg)$/,
@@ -45,7 +45,7 @@ module.exports = {
     },
     //plugins: []
     plugins:[
-       new ExtractTextPlugin('styles.css'),
+       new ExtractTextPlugin('style.css'),
        new HtmlWebpackPlugin({ 
         filename: 'index.html',
         template: 'index.html'
