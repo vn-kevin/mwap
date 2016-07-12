@@ -1,4 +1,5 @@
-const Login = ((arg)=>{
+import './../css/myopinion.less';
+const Opinion_details = ((arg)=>{
 	return {
 		init:function(arg){
 			
@@ -9,11 +10,9 @@ const Login = ((arg)=>{
 			var dom='#'+arg.page,
 				Srouter=arg.F;
 
-			$(dom+' #loginBtn').click(function(){
-				Srouter.setLoad('#index');
-			});
+			
 
 		}
 	}
 })
-export default Login;
+export default Opinion_details;

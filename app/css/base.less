@@ -1,3 +1,9 @@
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
 .yahei() {
     font-family: 'Microsoft Yahei', '微软雅黑', Helvetica, Arial, sans-serif;
 }
@@ -23,8 +29,109 @@
     filter: blur(1px);
 }
 
+
 :global {
-	
+	//global 
+	.ui-zk{
+		font-family: "Microsoft YaHei";
+		background: #fff;
+		h1{
+			font-size: .95rem;
+			font-weight: 400;
+			color: #565656;
+			.item-classify{
+				font-size: .5rem;
+				vertical-align: bottom;
+				line-height: 1.6rem;
+				color: #ababab;
+				span{
+						border:1px solid #f1e080;
+						color: #f1e080;
+						margin:0 .1rem;
+						padding: 0 .1rem;
+					}
+			}
+		}
+		.bar{
+			background: #292929;
+			.button-link{
+				color: #fff;
+			}
+			&:after{ background: none;}
+		}
+		.bar.bar-tab{
+			background-color: #fff;
+			&:before{
+				background-color: #a9a9a9;
+			}
+			.tab-item.active,.tab-item:active{
+				color:#e8cc2b;
+				.tab-label{color:#222;}
+			}
+			.iconfont{
+				font-style: normal;
+			    display: inline-block;
+			    vertical-align: middle;
+			    background-size: 100% auto;
+			    background-position: center;
+			    -webkit-font-smoothing: antialiased;
+			    -webkit-text-stroke-width: .2px;
+				top: .05rem;
+			    height: 1.2rem;
+			    font-size: 1.4rem;
+			    line-height: 1.2rem;
+			    padding-top: 0;
+			    padding-bottom: 0;
+			    position: relative;
+			    z-index: 20;
+			    padding: 0 .1rem;
+			    &.a2{
+					//font-size: 1.2rem;
+					top: -.05rem;
+			    }
+			    &.a3{
+			    	font-size: 1.3rem;
+			    	top: .1rem;
+			    }
+			    &.a4{
+			    	top: 0
+			    }
+			}
+			.iconfont~.tab-label{
+				display: block;
+			    font-size: .55rem;
+			    position: relative;
+			    top: .15rem;
+			}
+		}
+		.title{
+			color: #edd337;
+			font-size: 0.90rem;
+		}
+		.page{
+			background: #fff;
+		}
+		.page-group{
+			background: #fff;
+		}
+		.card{
+			border-top:1px solid #dedede;
+			border-left:1px solid #d6d6d6;
+			border-right:1px solid #d6d6d6;
+			border-bottom: 1px solid #dfdfdf;
+			box-shadow:none;
+		}
+		.us-ascii{
+			.list-block{
+				&.media-list{
+					.item-classify{
+						margin-top:.5rem;
+					}
+				}
+			}
+		}
+	}
+
 	//login 
 	.login{
 		.login_a{color:#fff !important; font-size: 16px}
@@ -50,13 +157,13 @@
 				text-align: center;
 	}
 	.lg_bp{
-				margin-top: 2.5em;	
+				margin-top: 3em;	
 			}
 	.lg_cp{
 				border-bottom:1px solid #0c1c21;
 				padding: .6em 0;
-				margin-bottom: 1em;
-				.icon{ font-size: 20px; margin-right: .1em;color:#000}
+				margin-bottom: .5em;
+				.iconfont{ font-size: 20px; margin-right: .1em;color:#000; position: relative; top: 2px;}
 				input{
 					background:none;
 					border: 0 none;

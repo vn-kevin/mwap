@@ -1,0 +1,72 @@
+.clearfix(){
+	zoom: 1;
+	&:after{
+		content: " ";
+		  display: block;
+		  clear: both;
+		  height: 0;
+	}
+}
+.index{
+	.banner{
+		width: 100%;
+		overflow: hidden;
+		height: 150px;
+		background: url(../images/dbanner.jpg) no-repeat top center;
+		background-size: 100%;
+	}
+
+	.menusB{
+		padding: .2em 0;
+		.clearfix();
+		float: left;
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	    flex: 0 0 auto;
+	    width: 100%;
+	    overflow: hidden;
+	}
+	.t_c{
+		text-align: center;
+		padding: 8px;
+		display: block;
+    	width: 25%;
+    	float: left;
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	    flex: 0 0 auto;
+	}
+	.ficons{
+		height: 60px;
+		width: 60px;
+		margin: 0 auto;
+		display: block;
+		background-size: 80%;
+		background-repeat: no-repeat;
+		background-position: center;
+		&.a1{
+			background-image: url(../images/a.png);
+		}
+		&.a2{
+			background-image: url(../images/a2.png);
+		}
+		&.a3{
+			background-image: url(../images/a3.png);
+		}
+		&.a4{
+			background-image: url(../images/a4.png);
+		}
+		&.a5{
+			background-image: url(../images/a5.png);
+		}
+		&.a6{
+			background-image: url(../images/a6.png);
+		}
+
+	}
+	.fname{
+		display: block;
+		color:#333;
+		font-size: .8rem;
+	}
+}

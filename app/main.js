@@ -1,6 +1,9 @@
 import './css/base.less';
 import Login from './js/login.js';
 import Index from './js/index.js';
+import Myopinion from './js/Myopinion.js';
+import Opinion_details from './js/opinion_details.js';
+import Msg from './js/msg.js';
 
 let Lindex= 0;
 $.config = {router: true}
@@ -10,10 +13,14 @@ $.config = {router: true}
 	直接在A href='#index'  sui 路由里面的内联路由
 
 */
+
 var Srouter={
 	thisF:{
 		login:Login(),
-		index:Index()
+		index:Index(),
+		myopinion:Myopinion(),
+		opinDetails:Opinion_details(),
+		msg:Msg()
 	},
 	//加载对应模版 
 	setLoad:function(url){
@@ -66,7 +73,7 @@ $(function(){
 	if(Lindex==0){
 
 		//开发设置 阀值 
-		Srouter.setLoad('#index')
+		Srouter.setLoad('#msg')
 		
 		//初始直接加载Login
 		Srouter.thisF['login'].init({page:"login",F:Srouter})
