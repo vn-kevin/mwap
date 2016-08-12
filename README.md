@@ -1,3 +1,5 @@
+娱乐版本 v2  m.sui （es6） wap => zkxx
+
 webpack 全部进行JS打包
 
 生成html + images + JS
